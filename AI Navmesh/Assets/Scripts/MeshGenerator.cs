@@ -23,6 +23,7 @@ public class MeshGenerator : MonoBehaviour
     float maxTerrHeight;
     public Gradient heightmap;
     public GameObject wallObject;
+    public GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -117,6 +118,12 @@ public class MeshGenerator : MonoBehaviour
             Vector3 randomRotation = new Vector3(0, randRot, 0);
             Instantiate(wallObject, vertices[randIndex], Quaternion.Euler(randomRotation));
         }
+        //spawn enemy
+        int randVertIndex = UnityEngine.Random.Range(0, vertices.Length - 1);
+        float randRotY = UnityEngine.Random.Range(-360f, 360f);
+        Vector3 randRotation = new Vector3(0, randRotY, 0);
+        Instantiate(enemy, vertices[randVertIndex], Quaternion.Euler(randRotation));
+
         //generate mesh and mesh collider
         mesh.Clear();
         mesh.vertices = vertices;

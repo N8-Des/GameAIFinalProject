@@ -16,16 +16,16 @@ public class IdleState : State
             {
                 //Team ID??
                 Vector3 targetDirection = characterStats.transform.position - transform.position;
-                float viewAngle = Vector3.Angle(targetDirection, transform.forward);
+                float viewAngle = Vector3.Angle(targetDirection, enemyManager.transform.forward);
                 if (viewAngle > enemyManager.minDetectionAngle && viewAngle < enemyManager.maxDetectionAngle)
                 {
                     enemyManager.currentTarget = characterStats;
                 }
             }
         }
-        enemyManager.distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, transform.position);
-        if(enemyManager.currentState != null)
+        if (enemyManager.currentTarget != null)
         {
+            enemyManager.distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, transform.position);
             return pursueState;
         }
         else

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pursuit : State
 {
     public State combatState;
+    public float maxAttackAngle;
     public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimationManager animationManager)
     {
         if (enemyManager.isInAction)
@@ -14,17 +15,17 @@ public class Pursuit : State
         Vector3 targetDirection = enemyManager.currentTarget.transform.position - enemyManager.transform.position;
         float viewAngle = Vector3.Angle(targetDirection, enemyManager.transform.forward);
         enemyManager.distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
-        if (enemyManager.distanceFromTarget > enemyManager.stopDistance && !enemyManager.animManager.anim.GetBool("IsInteracting") 
-            || (viewAngle < enemyManager.minDetectionAngle || viewAngle > enemyManager.maxDetectionAngle))
+        if (enemyManager.distanceFromTarget > enemyManager.stopDistance && !enemyManager.animManager.anim.GetBool("IsInteracting")
+            || (viewAngle < enemyManager.minDetectionAngle || viewAngle > enemyManager.maxDetectionAngle) && !enemyManager.animManager.anim.GetBool("IsInteracting"))
         {
             enemyManager.animManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
-            enemyManager.rb.velocity = enemyManager.transform.forward * enemyManager.moveSpeed;
+            enemyManager.rb.velocity = enemyManager.transform.forward * enemyManager.moveSpeed * 1.3f;
+            enemyManager.rb.AddForce(0, -100, 0);
         }
-
         ManageRotation(enemyManager);
         enemyManager.navAgent.transform.localPosition = Vector3.zero;
         enemyManager.navAgent.transform.localRotation = Quaternion.identity;
-        if (enemyManager.distanceFromTarget <= enemyManager.stopDistance && viewAngle > enemyManager.minDetectionAngle && viewAngle < enemyManager.maxDetectionAngle)
+        if (enemyManager.distanceFromTarget <= enemyManager.stopDistance && viewAngle > -enemyManager.maxDetectionAngle && viewAngle < enemyManager.maxDetectionAngle)
         {
             return combatState;
         }
@@ -50,11 +51,11 @@ public class Pursuit : State
         }
         else
         {
-            Vector3 relativeDir = enemyManager.transform.InverseTransformDirection(enemyManager.navAgent.desiredVelocity);
             Vector3 targetVel = enemyManager.rb.velocity;
             enemyManager.navAgent.enabled = true;
             enemyManager.navAgent.SetDestination(enemyManager.currentTarget.transform.position);
             enemyManager.rb.velocity = targetVel;
+            enemyManager.transform.position = Vector3.Lerp(enemyManager.transform.position, enemyManager.navAgent.transform.position, Time.deltaTime * 20);
             enemyManager.transform.rotation = Quaternion.Slerp(enemyManager.transform.rotation, enemyManager.navAgent.transform.rotation, enemyManager.rotationSpeed / Time.deltaTime);
         }
     }

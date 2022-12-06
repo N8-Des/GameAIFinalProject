@@ -20,7 +20,7 @@ public class EnemyManager : CharacterManager
     [HideInInspector]
     public Rigidbody rb;
 
-    [Header("State Shit")]
+    [Header("State stuff")]
     public State currentState;
 
     [Header("AI Settings")]
