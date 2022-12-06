@@ -7,7 +7,7 @@ public class AllyMove : MonoBehaviour
     public float mouseSens = 100f;
     public Transform playerBody;
     float xRotation = 0f;
-    float speed = 2.5f;
+    float speed = 3.5f;
     public CharacterController controller;
     private void OnEnable()
     {

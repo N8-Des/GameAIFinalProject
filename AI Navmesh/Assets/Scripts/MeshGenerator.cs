@@ -109,7 +109,8 @@ public class MeshGenerator : MonoBehaviour
                 index++;
             }
         }
-        for (int r = 0; r < 6; r++)
+        //generate walls on point.
+        for (int r = 0; r < 11; r++)
         {
             int randIndex = UnityEngine.Random.Range(0, vertices.Length - 1);
             float randRot = UnityEngine.Random.Range(-360f, 360f);
