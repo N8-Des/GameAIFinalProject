@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a00a16c84e9af645b95212257629fdb, type: 3}
+  m_Name: TimelessBare02
+  m_EditorClassIdentifier: 
+  actionAnimation: BareLight02
+  attackScore: 1
+  recoveryTime: 2
+  maximumAttackAngle: 45
+  minimumAttackAngle: -45
+  minDistance: 0
+  maxDistance: 1
+  pushAmount: 2.5

@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6065431821918383109
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TimelessSkin
+  m_Shader: {fileID: -6465566751694194690, guid: cde84aa8280f1a047ae6b372c08ab795, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_C3E4E218:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_19A5A3DA_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 71887df4b385adc4394b6c91a83ff1e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_2B8DBAA9_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 14be064be9a61964fb10826247850ba2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9a20565d82aa2884b2d4d42f87b52c4c_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 71887df4b385adc4394b6c91a83ff1e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - AcuteDepthThreshold: 1
+    - AcuteStartDot: 0.9
+    - BOOLEAN_38034D8A: 0
+    - DepthStrength: 1
+    - DepthThreshold: 1
+    - DepthTightening: 1
+    - DissolveAmount: 0.37
+    - DissolvePercent: 1
+    - FarNormalEndDepth: 15000
+    - FarNormalStartDepth: 1
+    - FarNormalThreshold: 1
+    - NormalStrength: 1
+    - NormalThreshold: 30
+    - NormalTightening: 15000
+    - Thickness: 0.002
+    - Vector1_17C98A21: 0.98
+    - Vector1_335FC59E: 0.68
+    - Vector1_3FF1A0DE: 1
+    - Vector1_40FDEAEA: 0
+    - Vector1_4FA78B17: -0.5
+    - Vector1_6CAFAD8B: 0
+    - Vector1_84134C4F: 0
+    - Vector1_9A9561E9: 0.91
+    - Vector1_B59CB145: 1.25
+    - Vector1_BA65C176: 100
+    - Vector1_BBBCD481: 71.31
+    - Vector1_C211E16C: 0
+    - Vector1_D05949CF: 0
+    - Vector1_D43D4428: 0.1
+    - Vector1_F107A7D4: 1
+    - Vector1_F6596BC2: 0.15
+    - Vector1_FAFF6E92: 1.55
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - BaseColor: {r: 0.49803925, g: 0.454902, b: 0.4156863, a: 0}
+    - Color_1E92961A: {r: 1, g: 1, b: 1, a: 1}
+    - Color_22EEDF2C: {r: 0, g: 0, b: 0, a: 1}
+    - Color_3AD86F4: {r: 0, g: 0, b: 0, a: 0}
+    - Color_5690C8C3: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+    - Color_6ADE67DD: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
+    - Color_FDA3873E: {r: 0, g: 0, b: 0, a: 0}
+    - DissolveColor: {r: 0.1411765, g: 2, b: 0, a: 0}
+    - OutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - ScreenUV: {r: 0, g: 0, b: 0, a: 0}
+    - Tiling: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_81CB33DC: {r: 1, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

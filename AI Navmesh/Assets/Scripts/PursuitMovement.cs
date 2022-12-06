@@ -12,7 +12,6 @@ public class PursuitMovement : MonoBehaviour
     public float speed = 1;
     void Update()
     {
-        agent.enabled = true;
         agent.SetDestination(targetToFollow.position);
         rb.velocity = transform.forward * speed;
         rb.AddForce(0, -4000, 0);
